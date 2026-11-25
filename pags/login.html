@@ -4,19 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Viagem dos Sonhos</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <script src="../script/carrinho.js" defer></script>
 </head>
-<body>
+<body class="autenticacao">
      <menu>
       <ul>
         <li><a href="../index.html">Home</a></li>
         <li><a href="destinos.html">Destinos</a></li>
         <li><a href="pacotes.html">Pacotes</a></li>
         <li><a href="sobrenos.html">Sobre nós</a></li>
+        <li><button type="button" id="abrir-carrinho" aria-haspopup="dialog" aria-controls="modal-carrinho">Carrinho (<span id="contador-carrinho">0</span>)</button></li>
       </ul>
       <button><a href="criarconta.html">Criar conta</a></button>
       <button><a href="login.html">Login</a></button>
     </menu>
+    <main>
      <form action="#" method="post">
+      <h1>Entrar na sua conta</h1>
       <label for="email">Email</label>
       <input type="email" name="email" id="email">
       <label for="senha">Senha</label>
@@ -27,5 +32,6 @@
     
     
     
+    </main>
 </body>
 </html>

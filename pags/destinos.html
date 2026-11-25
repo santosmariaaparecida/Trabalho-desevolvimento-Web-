@@ -5,18 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Viagem dos Sonhos</title>
     <link rel="stylesheet" href="../style/style.css" />
-  </head>
-  <body>
+      <script src="../script/carrinho.js" defer></script>
+</head>
+  <body class="catalogo">
     <menu>
       <ul>
         <li><a href="../index.html">Home</a></li>
         <li><a href="destinos.html">Destinos</a></li>
         <li><a href="pacotes.html">Pacotes</a></li>
         <li><a href="sobrenos.html">Sobre nós</a></li>
+        <li><button type="button" id="abrir-carrinho" aria-haspopup="dialog" aria-controls="modal-carrinho">Carrinho (<span id="contador-carrinho">0</span>)</button></li>
       </ul>
       <button><a href="criarconta.html">Criar conta</a></button>
       <button><a href="login.html">Login</a></button>
     </menu>
+    <main>
     <div class="container-destino">
 
       <div class="card">
@@ -24,7 +27,7 @@
         <img src="../img/fernando-de-noronha.jpg" alt="imagem de fernando de noronha">
         <p>Fernando de Noronha é um arquipélago vulcânico situado a cerca de 350 quilómetros ao largo da costa nordeste do Brasil. Tem o nome da sua maior ilha, um parque marinho e santuário ecológico protegido com uma linha costeira recortada e vários ecossistemas. É reconhecida pelas suas praias pouco urbanizadas e por atividades como mergulho e snorkeling. As tartarugas marinhas, as raias, os golfinhos e os tubarões dos recifes nadam nas águas quentes e cristalinas.</p>
         <p>R$ 2542,00</p>
-        <button>Adicionar ao pacote</button>
+        <button type="button" class="adicionar-carrinho" data-tipo="Destino" data-preco="254200">Adicionar ao carrinho</button>
       </div>
 
       <div class="card">
@@ -32,7 +35,7 @@
         <img src="../img/Disney.webp" alt="imagem da Disney ">
         <p>FO Walt Disney World Resort é um enorme complexo de entretenimento em Orlando (Bay Lake e Lake Buena Vista), na Flórida, Estados Unidos, inaugurado em 1º de outubro de 1971. É considerado o complexo de parques temáticos mais visitado do mundo, ocupando mais de 10.000 hectares (cerca de 11.031 hectares) com quatro parques temáticos, dois parques aquáticos, hotéis, restaurantes e áreas de compras.</p>
         <p>R$ 13.500,00</p>
-        <button>Adicionar ao pacote</button>
+        <button type="button" class="adicionar-carrinho" data-tipo="Destino" data-preco="1350000">Adicionar ao carrinho</button>
       </div>
 
       <div class="card">
@@ -40,7 +43,7 @@
         <img src="../img/Suica.jpeg" alt="imagem de Zurique">
         <p>Zurique é a maior cidade da Suíça, localizada no norte do país às margens do Lago de Zurique e cortada pelo rio Limmat. Combina centro financeiro global, arquitetura histórica, transporte eficiente e acesso rápido aos Alpes.</p>
         <p>R$ 4.817,00</p>
-        <button>Adicionar ao pacote</button>
+        <button type="button" class="adicionar-carrinho" data-tipo="Destino" data-preco="481700">Adicionar ao carrinho</button>
       </div>
 
       <div class="card">
@@ -48,7 +51,7 @@
         <img src="../img/Maldivas.jpg" alt="imagem de Maldivas">
         <p>As Maldivas são uma nação tropical no Oceano Índico composta por 26 atóis em formato de anel, que são formados por mais de 1.000 ilhas de coral. O país é conhecido pelas praias, pelas lagoas azuis e pelos extensos recifes. A capital, Malé, tem um movimentado mercado de peixes, restaurantes e lojas na rua principal, Majeedhee Magu, além da Hukuru Miskiy (também conhecida como Mesquita da Sexta-Feira), do século XVII, feita de coral branco esculpido.</p>
         <p>R$ 12.095,00</p>
-        <button>Adicionar ao pacote</button>
+        <button type="button" class="adicionar-carrinho" data-tipo="Destino" data-preco="1209500">Adicionar ao carrinho</button>
       </div>
 
       <div class="card">
@@ -56,7 +59,7 @@
         <img src="../img/Antartida.jpg" alt="imagem de Antártida">
         <p>A Antártida (ou Antártica) é o continente mais meridional da Terra, com cerca de 14 milhões de km² e aproximadamente 98% de sua superfície coberta por gelo. Não pertence a nenhum país e é administrada pelo Tratado da Antártida para fins pacíficos e de pesquisa científica.</p>
         <p>R$ 42.000,00</p>
-        <button>Adicionar ao pacote</button>
+        <button type="button" class="adicionar-carrinho" data-tipo="Destino" data-preco="4200000">Adicionar ao carrinho</button>
       </div>
 
       <div class="card">
@@ -64,7 +67,7 @@
         <img src="../img/Paraguai.jpg" alt="imagem do Paraguai">
         <p>O Paraguai é um país sem saída para o mar que faz fronteira com a Argentina, o Brasil e a Bolívia. Ele tem grandes faixas de pantanal, floresta subtropical e Chaco, uma região selvagem que consiste em savanas e matagais. A capital, Assunção, situada às margens do rio Paraguai, abriga o grandioso Palácio do Governo e o Museo del Barro, que exibe peças de cerâmica pré-colombianas e rendas nhanduti (que podem ser compradas em várias lojas).</p>
         <p>R$ 2.131,00</p>
-        <button>Adicionar ao pacote</button>
+        <button type="button" class="adicionar-carrinho" data-tipo="Destino" data-preco="213100">Adicionar ao carrinho</button>
       </div>
 
       <div class="card">
@@ -72,7 +75,7 @@
         <img src="../img/Milao.jpg" alt="imagem de Milão">
         <p>Milão, uma metrópole na região da Lombardia ao norte da Itália, é uma capital mundial da moda e do design. Cidade da bolsa de valores nacional, trata-se de um centro financeiro também conhecido pelas suas lojas e pelos seus restaurantes sofisticados. A catedral Gothic Duomo di Milano e o convento Santa Maria delle Grazie, onde está o mural de Leonardo da Vinci "A Última Ceia", são testemunhas de séculos de arte e cultura.</p>
         <p>R$ 9.473,00</p>
-        <button>Adicionar ao pacote</button>
+        <button type="button" class="adicionar-carrinho" data-tipo="Destino" data-preco="947300">Adicionar ao carrinho</button>
       </div>
 
       <div class="card">
@@ -80,9 +83,10 @@
         <img src="../img/Rio de Janeiro.jpg" alt="imagem do Rio de Janeiro">
         <p>O Corcovado é um dos morros da cidade do Rio de Janeiro, célebre no Brasil e no mundo pela sua estátua do Cristo Redentor de 38 metros de altura. O Cristo Redentor é um dos principais símbolos do país e oferece uma privilegiada vista panorâmica da cidade do Rio de Janeiro.</p>
         <p>R$ 139,00</p>
-        <button>Adicionar ao pacote</button>
+        <button type="button" class="adicionar-carrinho" data-tipo="Destino" data-preco="13900">Adicionar ao carrinho</button>
       </div>
 
     </div>
-  </body>
+      </main>
+</body>
 </html>

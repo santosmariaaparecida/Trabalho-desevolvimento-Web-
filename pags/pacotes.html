@@ -1,87 +1,148 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viagem dos Sonhos</title>
+    <title>Pacotes - Viagem dos Sonhos</title>
     <link rel="stylesheet" href="../style/style.css">
+    <script src="../script/carrinho.js" defer></script>
 </head>
-<body>
+<body class="catalogo">
+
     <menu>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="destinos.html">Destinos</a></li>
-        <li><a href="pacotes.html">Pacotes</a></li>
-        <li><a href="sobrenos.html">Sobre nós</a></li>
-      </ul>
-      <button><a href="criarconta.html">Criar conta</a></button>
-      <button><a href="login.html">Login</a></button>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="destinos.html">Destinos</a></li>
+            <li><a href="pacotes.html">Pacotes</a></li>
+            <li><a href="sobrenos.html">Sobre nós</a></li>
+        <li><button type="button" id="abrir-carrinho" aria-haspopup="dialog" aria-controls="modal-carrinho">Carrinho (<span id="contador-carrinho">0</span>)</button></li>
+        </ul>
+        <button><a href="criarconta.html">Criar conta</a></button>
+        <button><a href="login.html">Login</a></button>
     </menu>
+    <main>
+
+    <h1>Conheça nossos pacotes de viagem</h1>
+    <p>Escolha seu destino e prepare-se para viver momentos inesquecíveis!</p>
     <div class="container-destino">
 
-      <div class="card">
-        <p>Nome do local</p>
-        <div class="imagem-card"></div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, molestias. Deserunt laboriosam voluptas nobis natus mollitia iure ex in nihil dolores vel! Quisquam aspernatur, nam impedit illum exercitationem illo labore.</p>
-        <p>R$ 1000,00</p>
-        <button>Adicionar ao pacote</button>
-      </div>
+        <div class="card">
+            <p>Fernando de Noronha</p>
+            <img src="../img/fernando-de-noronha.jpg" alt="Fernando de Noronha">
+            <p>Um paraíso brasileiro com praias paradisíacas, águas cristalinas e uma vida marinha incrível. Ideal para quem ama natureza e mergulho.</p>
+            <ul>
+                <li>✈️ Passagens aéreas</li>
+                <li>🏨 Hospedagem</li>
+                <li>🍽️ Café da manhã</li>
+                <li>🚗 Transporte</li>
+                <li>📅 5 dias de viagem</li>
+            </ul>
+            <p>R$ 7.542,00</p>
+            <button type="button" class="adicionar-carrinho" data-tipo="Pacote" data-preco="754200">Adicionar ao carrinho</button>
+        </div>
 
-      <div class="card">
-        <p>Nome do local</p>
-        <div class="imagem-card"></div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, molestias. Deserunt laboriosam voluptas nobis natus mollitia iure ex in nihil dolores vel! Quisquam aspernatur, nam impedit illum exercitationem illo labore.</p>
-        <p>R$ 1000,00</p>
-        <button>Adicionar ao pacote</button>
-      </div>
+        <div class="card">
+            <p>Disney - Orlando</p>
+            <img src="../img/Disney.webp" alt="Disney">
+            <p>Conheça o mundo mágico da Disney, com parques temáticos, atrações incríveis e diversão para toda a família.</p>
+            <ul>
+                <li>✈️ Passagens aéreas</li>
+                <li>🏨 Hospedagem</li>
+                <li>🎢 Ingressos para parques</li>
+                <li>🚗 Transporte</li>
+                <li>📅 7 dias de viagem</li>
+            </ul>
+            <p>R$ 20.500,00</p>
+            <button type="button" class="adicionar-carrinho" data-tipo="Pacote" data-preco="2050000">Adicionar ao carrinho</button>
+        </div>
 
-      <div class="card">
-        <p>Nome do local</p>
-        <div class="imagem-card"></div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, molestias. Deserunt laboriosam voluptas nobis natus mollitia iure ex in nihil dolores vel! Quisquam aspernatur, nam impedit illum exercitationem illo labore.</p>
-        <p>R$ 1000,00</p>
-        <button>Adicionar ao pacote</button>
-      </div>
+        <div class="card">
+            <p>Zurique - Suíça</p>
+            <img src="../img/Suica.jpeg" alt="Zurique">
+            <p>Uma cidade encantadora, com belas paisagens, arquitetura histórica, lagos e montanhas. Perfeita para conhecer a cultura europeia.</p>
+            <ul>
+                <li>✈️ Passagens aéreas</li>
+                <li>🏨 Hospedagem</li>
+                <li>🍽️ Café da manhã</li>
+                <li>📅 6 dias de viagem</li>
+            </ul>
+            <p>R$ 8.817,00</p>
+            <button type="button" class="adicionar-carrinho" data-tipo="Pacote" data-preco="881700">Adicionar ao carrinho</button>
+        </div>
 
-      <div class="card">
-        <p>Nome do local</p>
-        <div class="imagem-card"></div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, molestias. Deserunt laboriosam voluptas nobis natus mollitia iure ex in nihil dolores vel! Quisquam aspernatur, nam impedit illum exercitationem illo labore.</p>
-        <p>R$ 1000,00</p>
-        <button>Adicionar ao pacote</button>
-      </div>
-      <div class="card">
-        <p>Nome do local</p>
-        <div class="imagem-card"></div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, molestias. Deserunt laboriosam voluptas nobis natus mollitia iure ex in nihil dolores vel! Quisquam aspernatur, nam impedit illum exercitationem illo labore.</p>
-        <p>R$ 1000,00</p>
-        <button>Adicionar ao pacote</button>
-      </div>
+        <div class="card">
+            <p>Maldivas</p>
+            <img src="../img/Maldivas.jpg" alt="Maldivas">
+            <p>Um destino tropical famoso pelas águas azul-turquesa, praias de areia branca e resorts sobre o mar. Ideal para relaxar.</p>
+            <ul>
+                <li>✈️ Passagens aéreas</li>
+                <li>🏨 Hospedagem em resort</li>
+                <li>🍽️ Alimentação</li>
+                <li>🏝️ Passeios turísticos</li>
+                <li>📅 6 dias de viagem</li>
+            </ul>
+            <p>R$ 21.095,00</p>
+            <button type="button" class="adicionar-carrinho" data-tipo="Pacote" data-preco="2109500">Adicionar ao carrinho</button>
+        </div>
 
-      <div class="card">
-        <p>Nome do local</p>
-        <div class="imagem-card"></div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, molestias. Deserunt laboriosam voluptas nobis natus mollitia iure ex in nihil dolores vel! Quisquam aspernatur, nam impedit illum exercitationem illo labore.</p>
-        <p>R$ 1000,00</p>
-        <button>Adicionar ao pacote</button>
-      </div>
+        <div class="card">
+            <p>Antártida</p>
+            <img src="../img/Antartida.jpg" alt="Antártida">
+            <p>Uma aventura inesquecível pelo continente gelado, com paisagens impressionantes, geleiras e contato com a vida selvagem.</p>
+            <ul>
+                <li>🚢 Cruzeiro de expedição</li>
+                <li>🏨 Hospedagem durante a viagem</li>
+                <li>🍽️ Alimentação</li>
+                <li>📅 10 dias de viagem</li>
+            </ul>
+            <p>R$ 72.000,00</p>
+            <button type="button" class="adicionar-carrinho" data-tipo="Pacote" data-preco="7200000">Adicionar ao carrinho</button>
+        </div>
 
-      <div class="card">
-        <p>Nome do local</p>
-        <div class="imagem-card"></div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, molestias. Deserunt laboriosam voluptas nobis natus mollitia iure ex in nihil dolores vel! Quisquam aspernatur, nam impedit illum exercitationem illo labore.</p>
-        <p>R$ 1000,00</p>
-        <button>Adicionar ao pacote</button>
-      </div>
+        <div class="card">
+            <p>Paraguai</p>
+            <img src="../img/Paraguai.jpg" alt="Paraguai">
+            <p>Explore a cultura paraguaia, conheça Assunção, suas paisagens naturais, mercados e atrações históricas.</p>
+            <ul>
+                <li>🚌 Transporte</li>
+                <li>🏨 Hospedagem</li>
+                <li>🍽️ Café da manhã</li>
+                <li>📅 4 dias de viagem</li>
+            </ul>
+            <p>R$ 4.131,00</p>
+            <button type="button" class="adicionar-carrinho" data-tipo="Pacote" data-preco="413100">Adicionar ao carrinho</button>
+        </div>
 
-      <div class="card">
-        <p>Nome do local</p>
-        <div class="imagem-card"></div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, molestias. Deserunt laboriosam voluptas nobis natus mollitia iure ex in nihil dolores vel! Quisquam aspernatur, nam impedit illum exercitationem illo labore.</p>
-        <p>R$ 1000,00</p>
-        <button>Adicionar ao pacote</button>
-      </div>
+        <div class="card">
+            <p>Milão - Itália</p>
+            <img src="../img/Milao.jpg" alt="Milão">
+            <p>Descubra uma das capitais mundiais da moda, com arquitetura impressionante, gastronomia e muita história.</p>
+            <ul>
+                <li>✈️ Passagens aéreas</li>
+                <li>🏨 Hospedagem</li>
+                <li>🍽️ Café da manhã</li>
+                <li>📅 7 dias de viagem</li>
+            </ul>
+            <p>R$ 15.473,00</p>
+            <button type="button" class="adicionar-carrinho" data-tipo="Pacote" data-preco="1547300">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="card">
+            <p>Corcovado - Rio de Janeiro</p>
+            <img src="../img/Rio de Janeiro.jpg" alt="Corcovado">
+            <p>Visite o famoso Cristo Redentor e aproveite uma das vistas mais bonitas do Rio de Janeiro.</p>
+            <ul>
+                <li>🚐 Transporte</li>
+                <li>🎟️ Ingresso para o Cristo Redentor</li>
+                <li>📅 Passeio de 1 dia</li>
+            </ul>
+            <p>R$ 269,00</p>
+            <button type="button" class="adicionar-carrinho" data-tipo="Pacote" data-preco="26900">Adicionar ao carrinho</button>
+        </div>
 
     </div>
+
+    </main>
 </body>
 </html>

@@ -4,29 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Viagem dos Sonhos</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="script/carrinho.js" defer></script>
 </head>
-<body>
+<body class="home">
     <menu>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="pags/destinos.html">Destinos</a></li>
             <li><a href="pags/pacotes.html">Pacotes</a></li>
             <li><a href="pags/sobrenos.html">Sobre nós</a></li>
+        <li><button type="button" id="abrir-carrinho" aria-haspopup="dialog" aria-controls="modal-carrinho">Carrinho (<span id="contador-carrinho">0</span>)</button></li>
         </ul>
         <button><a href="pags/criarconta.html">Criar conta</a></button>
         <button><a href="pags/login.html">Login</a></button>
     </menu>
+    <main>
     <h2>Viage conosco</h2>
     <h1>Explore novos horizontes</h1>
     <p>Vivemos em um mundo repleto de beleza, encanto e aventura. Não há fim para as aventuras que podemos viver, basta buscá-las de olhos abertos.</p>
     <form action="">
-        <label for="">Destino?</label>
-        <input type="text">
-        <label for="">Data Destino?</label>
-        <input type="date" name="" id="">
-        <label for="">Quantas pessoas?</label>
-        <input type="number" name="" id="">
+        <label for="destino">Destino?</label>
+        <input type="text" id="destino" name="destino">
+        <label for="data">Data Destino?</label>
+        <input type="date" id="data" name="data">
+        <label for="pessoas">Quantas pessoas?</label>
+        <input type="number" id="pessoas" name="pessoas">
         <input type="submit" value="Pesquisar">
     </form>
+    </main>
 </body>
 </html>
